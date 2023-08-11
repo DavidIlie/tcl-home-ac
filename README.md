@@ -8,6 +8,11 @@ This repository contains a solution for accessing the API of the TCLHome mobile 
 
 The TCLHome app operates by authenticating users with a email and password, generating an access token, and subsequently obtaining a "Saas Token" for further authentication through a refresh token endpoint. The challenge arose when trying to use the obtained token to make requests to the API. A checksum calculation was involved, preventing direct usage of the token for requests.
 
+## What I want to achieve in the future:
+
+-  [ ] Make this a proper home assistant integration
+-  [ ] it uses some more attributes from a previous request I made to authenticate itself to AWS and then to an MQTT server which I can’t snoop because it detects a proxy, so this is way out of my league. FIND A WAY TO DO IT!
+
 ## Basic Solution Overview
 
 -  **Emulator and Man-In-The-Middle (MITM) Proxy**: We utilized an emulator to run the TCLHome app and intercepted its communication using a MITM proxy. This proxy intercepts requests between the client (app) and the server, revealing the details of requests made from the app.
