@@ -1,6 +1,6 @@
 # Reverse Engineering TCLHome App for API Access
 
-> TBD: Insert YouTube Video embed
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A8ICsEnGfkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 This repository contains a solution for accessing the API of the TCLHome mobile application through reverse engineering techniques. The TCLHome app provides control over TCL air conditioners and related devices, but the API is not publicly documented. By reverse engineering the app's communication with the server, I was able to gain insight into the API structure and develop a method to interact with it programmatically.
 
