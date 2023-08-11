@@ -4,6 +4,8 @@
 
 This repository contains a solution for accessing the API of the TCLHome mobile application through reverse engineering techniques. The TCLHome app provides control over TCL air conditioners and related devices, but the API is not publicly documented. By reverse engineering the app's communication with the server, I was able to gain insight into the API structure and develop a method to interact with it programmatically.
 
+[See blog post](https://davidilie.com)
+
 ## Background
 
 The TCLHome app operates by authenticating users with a email and password, generating an access token, and subsequently obtaining a "Saas Token" for further authentication through a refresh token endpoint. The challenge arose when trying to use the obtained token to make requests to the API. A checksum calculation was involved, preventing direct usage of the token for requests.
