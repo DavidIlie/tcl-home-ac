@@ -37,5 +37,5 @@ jobs:
               context: .
               tags: |
                  ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
-                 ${{ env.IMAGE }}:arm-${{ steps.prep.outputs.BUILD_ID }}  # ARM image tag
+                 ${{ env.IMAGE }}:arm-${{ steps.prep.outputs.BUILD_ID }}
               platforms: linux/amd64,linux/arm64,linux/arm/v7
