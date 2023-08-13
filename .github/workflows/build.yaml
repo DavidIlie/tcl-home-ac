@@ -1,4 +1,5 @@
 name: tcl-home:build
+
 on:
    push:
       branches:
@@ -17,7 +18,7 @@ jobs:
               sha=${GITHUB_SHA::8}
               ts=$(date +%s)
               echo "::set-output name=BUILD_ID::${branch}-${sha}-${ts}"
-         - name: "Build:checkout"
+         - name: Checkout code
            uses: actions/checkout@v2
          - name: Set up QEMU
            uses: docker/setup-qemu-action@v1
@@ -36,3 +37,5 @@ jobs:
               context: .
               tags: |
                  ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
+                 ${{ env.IMAGE }}:arm-${{ steps.prep.outputs.BUILD_ID }}  # ARM image tag
+              platforms: linux/amd64,linux/arm64,linux/arm/v7
