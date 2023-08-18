@@ -78,7 +78,7 @@ export const getPowerState = async (saasToken: string) => {
 
    const response = await r.json();
 
-   if (r.status !== 200) return { error: response };
+   if (r.status !== 200) throw new Error("b");
 
    return {
       on:
