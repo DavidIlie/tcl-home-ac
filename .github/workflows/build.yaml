@@ -9,7 +9,9 @@ jobs:
    execute:
       env:
          IMAGE: ghcr.io/davidilie/tcl-home-ac
-      runs-on: davidapps-linux-x64
+      # This publishes amd64, arm64 and arm/v7; Talos needs the binfmt-misc
+      # system extension before it can run safely on the home runner fleet.
+      runs-on: ubuntu-24.04
       steps:
          - name: Generate build ID
            id: prep
